@@ -1,2 +1,4 @@
-# UFPB-Ciencia-de-Dados
-Repositório para guardar atividades das aulas de Introdução a Ciência de Dados (GDCOC0089)
+# UFPB (GDCOC0089) - Introdução a Ciência de Dados
+-----
+
+#### Repositório para guardar as respectivas atividades da turma GDCOC0089 - Introdução a Ciência de Dados da UFPB
