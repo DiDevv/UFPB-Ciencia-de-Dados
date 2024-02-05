@@ -1,34 +1,46 @@
-#Aluno: Diogo Dias da Silva
-#Nº de matrícula: 20220028795
+# Main: #Aluno: Diogo Dias da Silva
+# Nº de matrícula: 20220028795
 
-from table import criar_tabela, add_linha, rem_linha, add_col, rem_col
+from table import criar_tabela, add_linha, rem_linha, add_col, rem_col, soma_col, media_colunas, exibir_tabela, abrir_csv, condicao_idade_maior_que_25, filtrar
 
-
-#Criação da Tabela
+# Criação da Tabela
 nomes_colunas = ['nome', 'idade']
-valores = [['joão', 'maria', 'josé'], [20, 21, 19]]
-
+valores = [['joão', 'maria', 'josé'], [20, 28, 19]]
 minha_tabela = criar_tabela(nomes_colunas, valores)
 
-print(minha_tabela, "Tabela Criada!")
+# Adicionando uma nova coluna
+nome_col_nova1 = 'cidade'
+valores_col_nova1 = ["São Paulo", "Rio de Janeiro", "Recife"]
+add_col(minha_tabela, nome_col_nova1, valores_col_nova1)
 
-#Adicionando Linha
-nova_linha = ['diogo', 19]
-add_linha(minha_tabela, nova_linha)
-print(minha_tabela, "Linha adicionada")
+# Exibindo a tabela original
+print("Tabela Original:")
+exibir_tabela(minha_tabela)
 
-#Removendo Linha
-remover_linha = ['maria', 21]
-rem_linha(minha_tabela, remover_linha )
-print(minha_tabela, "Linha removida")
+# Removendo uma linha
+rem_linha(minha_tabela, 2)
 
-#Adicionando Coluna
-nome_col_nova = 'cidade'
-valores_nova_col = ['São Paulo', 'Rio de Janeiro', 'Goiana']
-add_col(minha_tabela, nome_col_nova, valores_nova_col)
-print(minha_tabela, f"coluna {nome_col_nova} adicionada")
+# Exibindo a tabela após a remoção da linha
+print("\nTabela após a remoção da terceira linha:")
+exibir_tabela(minha_tabela)
 
-#Removendo Coluna
-nome_col = 'cidade'
-rem_col(minha_tabela, nome_col)
-print(minha_tabela, f"coluna {nome_col} removida")
+# Calculando e exibindo a soma das colunas
+print("\nSoma das colunas:")
+print(soma_col(minha_tabela))
+
+# Calculando e exibindo a média das colunas
+print("\nMédia das colunas:")
+print(media_colunas(minha_tabela))
+
+# Abrindo um arquivo CSV
+nome_arquivo_csv = 'teste.csv'
+tabela_csv = abrir_csv(nome_arquivo_csv)
+
+# Exibindo a tabela do CSV
+print("\nTabela do arquivo CSV:")
+exibir_tabela(tabela_csv)
+
+# Filtrando a tabela
+print("\nTabela filtrada (idade maior que 25):")
+tabela_filtrada = filtrar(minha_tabela, condicao_idade_maior_que_25)
+exibir_tabela(tabela_filtrada)
