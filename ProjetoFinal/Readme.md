@@ -3,6 +3,8 @@ Integrate do Grupo: Diogo Dias da Silva
 
 Matrícula: 20220028795
 
+Os microdados do enem podem ser encontrados no site: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem
+
 Objetivo do Projeto
 ---
 
